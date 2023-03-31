@@ -22,11 +22,6 @@ opt = { }
 
 require('lazy').setup(plugins, opt)
 
-require('catppuccin').setup({
-    flavour = 'macchiato',
-    transparent_background = true,
-    show_end_of_buffer = false,
-    term_colors = true,
-})
+require('colorscheme/catppuccin')
+require('plugin-config/nvim-tree')
 
-vim.cmd.colorscheme 'catppuccin'
