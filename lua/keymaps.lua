@@ -10,5 +10,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+vim.opt.hidden = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')

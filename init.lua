@@ -15,6 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 
 plugins = {
     'nvim-tree/nvim-tree.lua',
+    'nvim-tree/nvim-web-devicons',
+    'nvim-lualine/lualine.nvim',
+
     {'catppuccin/nvim', name = 'catppuccin'}
 }
 
@@ -22,6 +25,5 @@ opt = { }
 
 require('lazy').setup(plugins, opt)
 
-require('colorscheme/catppuccin')
-require('plugin-config/nvim-tree')
-
+require('colorscheme.catppuccin')
+require('plugin-config')
