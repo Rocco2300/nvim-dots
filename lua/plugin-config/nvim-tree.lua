@@ -4,7 +4,13 @@ vim.g.tree_open = false
 
 vim.opt.termguicolors = true
 
-require('nvim-tree').setup()
+require('nvim-tree').setup({
+    actions = {
+        open_file = {
+            quit_on_open = true,
+        }
+    }
+})
 
 vim.keymap.set('n', '<leader>t', 
 function()

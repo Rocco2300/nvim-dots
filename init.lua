@@ -17,8 +17,19 @@ plugins = {
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
+    'nvim-treesitter/nvim-treesitter',
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
+    },
 
-    {'catppuccin/nvim', name = 'catppuccin'}
+    { 'catppuccin/nvim', name = 'catppuccin' }
 }
 
 opt = { }
