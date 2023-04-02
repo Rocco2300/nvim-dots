@@ -14,8 +14,6 @@ vim.opt.hidden = true
 
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', opts)
-
 vim.keymap.set('v', '<A-j>', ':m \'>+1<CR> gv=gv', opts)
 vim.keymap.set('v', '<A-k>', ':m \'<-2<CR> gv=gv', opts)
 
@@ -24,3 +22,12 @@ vim.keymap.set('n', '<A-k>', ':m .-2<CR> ==', opts)
 
 vim.keymap.set('i', '<A-j>', '<Esc>:m .+1<CR> ==gi', opts)
 vim.keymap.set('i', '<A-k>', '<Esc>:m .-2<CR> ==gi', opts)
+
+vim.keymap.set('n', '<tab>', ':bn<CR>', opts)
+vim.keymap.set('n', '<leader><tab>', ':bp<CR>', opts)
+
+vim.keymap.set('n', '<C-q>', '<C-w>q', opts)
+vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
+vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
+vim.keymap.set('n', '<C-l>', '<C-w>l', opts)

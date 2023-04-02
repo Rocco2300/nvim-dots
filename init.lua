@@ -19,16 +19,33 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
     {
+        'akinsho/toggleterm.nvim',
+        tag = 'v2.5.0',
+        config = true
+    },
+    {
+        'akinsho/bufferline.nvim',
+        tag = 'v3.6.0'
+    },
+    {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+
+    -- lsp
     {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
     },
 
+    -- completion
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'L3MON4D3/LuaSnip',
+
+    -- colors
     { 'catppuccin/nvim', name = 'catppuccin' }
 }
 
@@ -38,4 +55,3 @@ require('lazy').setup(plugins, opt)
 
 require('colorscheme.catppuccin')
 require('plugin-config')
-require('autocmd')

@@ -20,8 +20,12 @@ local on_attach = function(_, _)
     })
 end
 
-require('lspconfig').lua_ls.setup({
+local lsp = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+lsp.lua_ls.setup({
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
         Lua = {
             diagnostics = {
@@ -31,5 +35,7 @@ require('lspconfig').lua_ls.setup({
     }
 })
 
-require('lspconfig').clangd.setup({
+lsp.clangd.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
 })
