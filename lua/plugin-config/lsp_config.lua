@@ -11,11 +11,17 @@ local on_attach = function(_, _)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+
+    -- format on save
+    vim.api.nvim_create_autocmd('BufWritePre', {
+        callback = function()
+            vim.lsp.buf.format({ async = false })
+        end
+    })
 end
 
 require('lspconfig').lua_ls.setup({
     on_attach = on_attach,
-
     settings = {
         Lua = {
             diagnostics = {
