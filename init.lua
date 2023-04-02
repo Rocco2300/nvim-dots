@@ -19,6 +19,12 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
     {
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup()
+        end
+    },
+    {
         'akinsho/toggleterm.nvim',
         tag = 'v2.5.0',
         config = true
