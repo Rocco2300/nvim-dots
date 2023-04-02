@@ -13,7 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
@@ -32,9 +32,10 @@ plugins = {
     { 'catppuccin/nvim', name = 'catppuccin' }
 }
 
-opt = { }
+local opt = {}
 
 require('lazy').setup(plugins, opt)
 
 require('colorscheme.catppuccin')
 require('plugin-config')
+require('autocmd')
